@@ -6,17 +6,10 @@ import { useQuery } from 'react-query';
 import { Block } from '@cosmjs/stargate';
 import { cosmosClient } from './services/cosmosClient';
 import { BlockContext } from './store/BlockContext';
+import {useQueryBlocks} from "./services/useQueryBlocks";
 
 function Routing() {
-  const BlockQuery = useQuery<Block, Error>('Block', () =>
-    cosmosClient.getBlock().then((block) => block)
-  );
-  const { addBlock } = useContext(BlockContext);
-
-  useEffect(() => {
-    if (typeof addBlock !== 'undefined' && typeof BlockQuery?.data !== 'undefined')
-      addBlock(BlockQuery.data);
-  }, [BlockQuery.data]);
+    useQueryBlocks();
 
   return (
     <BrowserRouter>
