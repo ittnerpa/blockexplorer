@@ -21,9 +21,7 @@ const Blocks = (): JSX.Element => {
         <Container maxWidth="lg">
           <Grid container spacing={GRID_SPACING}>
             <Grid item xs={12}>
-              <Grid container spacing={GRID_SPACING}>
-                <MainTable rows={formatBlockTypeToTableData(blocks)} />
-              </Grid>
+              <MainTable rows={formatBlockTypeToTableData(blocks)} />
             </Grid>
           </Grid>
         </Container>

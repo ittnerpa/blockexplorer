@@ -1,4 +1,4 @@
-import {styled, useTheme} from '@mui/styles';
+import { styled, useTheme } from '@mui/styles';
 import { AppBar, Avatar, Badge, Box, IconButton, Toolbar, Tooltip } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
@@ -13,7 +13,7 @@ export const Navbar = ({
 }: {
   onSidebarOpen: React.MouseEventHandler<HTMLButtonElement> | undefined;
 }) => {
-    const theme = useTheme()
+  const theme = useTheme();
 
   return (
     <>
@@ -25,10 +25,10 @@ export const Navbar = ({
           width: {
             lg: 'calc(100% - 280px)'
           },
-            // @ts-ignore
-            backgroundColor: theme.palette.background.paper,
-            // @ts-ignore
-            boxShadow: theme.shadows[3]
+          // @ts-ignore
+          backgroundColor: theme.palette.background.paper,
+          // @ts-ignore
+          boxShadow: theme.shadows[3]
         }}
         {...other}
       >

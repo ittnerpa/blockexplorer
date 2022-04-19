@@ -6,7 +6,7 @@ import { User as UserIcon } from '../icons/user';
 import { Users as UsersIcon } from '../icons/users';
 import { Logo } from './Logo';
 import { NavItem } from './NavItem';
-import {useTheme} from "@mui/styles";
+import { useTheme } from '@mui/styles';
 
 const items = [
   {
@@ -38,7 +38,7 @@ export const Sidebar = ({
   open: boolean;
   onClose: (event?: object) => void;
 }) => {
-  const theme = useTheme()
+  const theme = useTheme();
 
   const lgUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('lg'), {
     defaultMatches: true,

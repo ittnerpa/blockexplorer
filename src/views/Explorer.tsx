@@ -24,36 +24,28 @@ const Explorer = (): JSX.Element => {
         <Container maxWidth="lg">
           <Grid container spacing={GRID_SPACING}>
             <Grid item xs={12} md={4}>
-              <Grid container justifyContent="center" spacing={GRID_SPACING} >
-                  <Grid item xs={12}>
-                <MainCard
-                  title={lastBlock?.header?.height ?? '-'}
-                  subTitle={'Current height'}
-                  icon={<GridViewSharpIcon />}
-                />
-                  </Grid>
-              </Grid>
+              <MainCard
+                title={lastBlock?.header?.height ?? '-'}
+                subTitle={'Current height'}
+                icon={<GridViewSharpIcon />}
+              />
             </Grid>
             <Grid item xs={12} md={4}>
-              <Grid container justifyContent="center" spacing={GRID_SPACING}>
-                <Grid item xs={12}>
-                <MainCard title={lastBlock?.header?.height ?? '-'} subTitle={'Current height'} icon={<GridViewSharpIcon />}/>
-                </Grid>
-              </Grid>
+              <MainCard
+                title={lastBlock?.header?.height ?? '-'}
+                subTitle={'Current height'}
+                icon={<GridViewSharpIcon />}
+              />
             </Grid>
             <Grid item xs={12} md={4}>
-              <Grid container justifyContent="center" spacing={GRID_SPACING}>
-                <Grid item xs={12}>
-                <MainCard title={lastBlock?.header?.height ?? '-'} subTitle={'Current height'} icon={<GridViewSharpIcon />}/>
-                </Grid>
-              </Grid>
+              <MainCard
+                title={lastBlock?.header?.height ?? '-'}
+                subTitle={'Current height'}
+                icon={<GridViewSharpIcon />}
+              />
             </Grid>
             <Grid item xs={12}>
-              <Grid container justifyContent="center" spacing={GRID_SPACING}>
-                <Grid item xs={12}>
-                <MainTable rows={formatBlockTypeToTableData(blocks)} />
-                </Grid>
-              </Grid>
+              <MainTable rows={formatBlockTypeToTableData(blocks)} />
             </Grid>
           </Grid>
         </Container>
