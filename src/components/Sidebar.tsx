@@ -4,7 +4,7 @@ import { ChartBar as ChartBarIcon } from '../icons/chart-bar';
 import { ShoppingBag as ShoppingBagIcon } from '../icons/shopping-bag';
 import { User as UserIcon } from '../icons/user';
 import { Users as UsersIcon } from '../icons/users';
-import { Logo } from './Logo';
+import { Lock as LockIcon } from '../icons/lock';
 import { NavItem } from './NavItem';
 import { useTheme } from '@mui/styles';
 
@@ -61,15 +61,9 @@ export const Sidebar = ({
         }}
       >
         <div>
-          <Box sx={{ p: 3 }}>
-            <a>
-              <Logo
-                sx={{
-                  height: 42,
-                  width: 42
-                }}
-              />
-            </a>
+          <Box sx={{ p: 3,                   height: 42,
+            width: 42 }}>
+                <LockIcon />
           </Box>
         </div>
         <Divider
