@@ -5,7 +5,7 @@ export function formatBlockTypeToTableData(blocks: Block[]): TableData[] {
   return blocks.map((block) => {
     return {
       height: block.header.height.toString(),
-      hashId: block.header.chainId,
+      hashId: block.id,
       date: block.header.time,
       numberOfTransactions: block.txs.length
     } as TableData;
