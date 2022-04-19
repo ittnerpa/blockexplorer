@@ -1,4 +1,4 @@
-import { styled } from '@mui/styles';
+import {styled, useTheme} from '@mui/styles';
 import { AppBar, Avatar, Badge, Box, IconButton, Toolbar, Tooltip } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
@@ -7,29 +7,28 @@ import { UserCircle as UserCircleIcon } from '../icons/user-circle';
 import { Users as UsersIcon } from '../icons/users';
 import React from 'react';
 
-const NavbarRoot = styled(AppBar)(({ theme }) => ({
-  // @ts-ignore
-  backgroundColor: theme.palette.background.paper,
-  // @ts-ignore
-  boxShadow: theme.shadows[3]
-}));
-
 export const Navbar = ({
   onSidebarOpen,
   ...other
 }: {
   onSidebarOpen: React.MouseEventHandler<HTMLButtonElement> | undefined;
 }) => {
+    const theme = useTheme()
+
   return (
     <>
-      <NavbarRoot
+      <AppBar
         sx={{
           left: {
             lg: 280
           },
           width: {
             lg: 'calc(100% - 280px)'
-          }
+          },
+            // @ts-ignore
+            backgroundColor: theme.palette.background.paper,
+            // @ts-ignore
+            boxShadow: theme.shadows[3]
         }}
         {...other}
       >
@@ -81,7 +80,7 @@ export const Navbar = ({
             <UserCircleIcon fontSize="small" />
           </Avatar>
         </Toolbar>
-      </NavbarRoot>
+      </AppBar>
     </>
   );
 };

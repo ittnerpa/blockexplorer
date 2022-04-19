@@ -13,7 +13,7 @@ interface MainCardProps {
 
 export default function MainCard({ title, subTitle, icon }: MainCardProps) {
   return (
-    <Card sx={{ minWidth: 275 }}>
+    <Card sx={{ minWidth: 275, width: '100%'}}>
       <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
         <CardContent>
           <Typography variant="body1" color="text.secondary" gutterBottom>

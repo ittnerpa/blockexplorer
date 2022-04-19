@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
-import { Box, Divider, Drawer, Theme, Typography, useMediaQuery } from '@mui/material';
+import { Box, Divider, Drawer, Theme, useMediaQuery } from '@mui/material';
 import { ChartBar as ChartBarIcon } from '../icons/chart-bar';
-import { Selector as SelectorIcon } from '../icons/selector';
 import { ShoppingBag as ShoppingBagIcon } from '../icons/shopping-bag';
 import { User as UserIcon } from '../icons/user';
 import { Users as UsersIcon } from '../icons/users';
 import { Logo } from './Logo';
 import { NavItem } from './NavItem';
+import {useTheme} from "@mui/styles";
 
 const items = [
   {
@@ -38,6 +38,8 @@ export const Sidebar = ({
   open: boolean;
   onClose: (event?: object) => void;
 }) => {
+  const theme = useTheme()
+
   const lgUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('lg'), {
     defaultMatches: true,
     noSsr: false
@@ -69,36 +71,6 @@ export const Sidebar = ({
               />
             </a>
           </Box>
-          <Box sx={{ px: 2 }}>
-            <Box
-              sx={{
-                alignItems: 'center',
-                backgroundColor: 'rgba(255, 255, 255, 0.04)',
-                cursor: 'pointer',
-                display: 'flex',
-                justifyContent: 'space-between',
-                px: 3,
-                py: '11px',
-                borderRadius: 1
-              }}
-            >
-              <div>
-                <Typography color="inherit" variant="subtitle1">
-                  Acme Inc
-                </Typography>
-                <Typography color="neutral.400" variant="body2">
-                  Your tier : Premium
-                </Typography>
-              </div>
-              <SelectorIcon
-                sx={{
-                  color: 'neutral.500',
-                  width: 14,
-                  height: 14
-                }}
-              />
-            </Box>
-          </Box>
         </div>
         <Divider
           sx={{
@@ -123,7 +95,8 @@ export const Sidebar = ({
         open
         PaperProps={{
           sx: {
-            backgroundColor: 'neutral.900',
+            //@ts-ignore
+            backgroundColor: theme.palette.neutral['800'],
             color: '#FFFFFF',
             width: 280
           }

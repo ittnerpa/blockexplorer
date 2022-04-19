@@ -23,28 +23,36 @@ const Explorer = (): JSX.Element => {
       >
         <Container maxWidth="lg">
           <Grid container spacing={GRID_SPACING}>
-            <Grid item xs={6}>
-              <Grid container spacing={GRID_SPACING}>
+            <Grid item xs={12} md={4}>
+              <Grid container justifyContent="center" spacing={GRID_SPACING} >
+                  <Grid item xs={12}>
                 <MainCard
                   title={lastBlock?.header?.height ?? '-'}
                   subTitle={'Current height'}
                   icon={<GridViewSharpIcon />}
                 />
+                  </Grid>
               </Grid>
             </Grid>
-            <Grid item xs={6}>
-              <Grid container spacing={GRID_SPACING}>
-                <MainCard title={lastBlock?.header?.height ?? '-'} subTitle={'Current height'} />
+            <Grid item xs={12} md={4}>
+              <Grid container justifyContent="center" spacing={GRID_SPACING}>
+                <Grid item xs={12}>
+                <MainCard title={lastBlock?.header?.height ?? '-'} subTitle={'Current height'} icon={<GridViewSharpIcon />}/>
+                </Grid>
               </Grid>
             </Grid>
-            <Grid item xs={6}>
-              <Grid container spacing={GRID_SPACING}>
-                <MainCard title={lastBlock?.header?.height ?? '-'} subTitle={'Current height'} />
+            <Grid item xs={12} md={4}>
+              <Grid container justifyContent="center" spacing={GRID_SPACING}>
+                <Grid item xs={12}>
+                <MainCard title={lastBlock?.header?.height ?? '-'} subTitle={'Current height'} icon={<GridViewSharpIcon />}/>
+                </Grid>
               </Grid>
             </Grid>
             <Grid item xs={12}>
-              <Grid container spacing={GRID_SPACING}>
+              <Grid container justifyContent="center" spacing={GRID_SPACING}>
+                <Grid item xs={12}>
                 <MainTable rows={formatBlockTypeToTableData(blocks)} />
+                </Grid>
               </Grid>
             </Grid>
           </Grid>
