@@ -19,16 +19,6 @@ const items = [
     icon: <UsersIcon fontSize="small" />,
     title: 'Blocks'
   },
-  {
-    href: '/',
-    icon: <ShoppingBagIcon fontSize="small" />,
-    title: 'Further'
-  },
-  {
-    href: '/',
-    icon: <UserIcon fontSize="small" />,
-    title: 'Items'
-  }
 ];
 
 export const Sidebar = ({
